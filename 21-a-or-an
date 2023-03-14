@@ -1,5 +1,6 @@
 public String aOrAn(String word) {
     List<String> vowels = new List<String>{'a', 'e', 'i', 'o', 'u'};
 
-    return vowels.contains(word[0])) ? 'an ' + word : 'a ' + word;
+    String aOrAn = vowels.contains(word[0])) ? 'an ' : 'a ';
+    return aOrAn + word;
 }
