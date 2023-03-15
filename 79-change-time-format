@@ -17,5 +17,5 @@ public String changeTimeFormat(String strTime) {
     String strHour=string.valueof(hour);
 
   if (strHour.length()==1) strhour= '0'+hour;
-  return strHour + ':'+ minutes + ' '+ timeofDay;
+  return strHour + ':'+ minutes + ' '+ amOrPm;
 }
