@@ -1,11 +1,11 @@
 public Boolean isLeapYear(Integer year) {
-    if (year % 4 != 0) {
+    if (year.mod(4) != 0) {
         // not evenly divisible by 4
         return false;
-    } else if (year % 100 != 0) {
+    } else if (year.mod(100) != 0) {
         // evenly divisible by 4 but not by 100
         return true;
-    } else if (year % 400 != 0) {
+    } else if (year.mod(400) != 0) {
         // evenly divisible by 100 but not by 400
         return false;
     } else {
