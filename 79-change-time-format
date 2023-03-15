@@ -1,21 +1,31 @@
 public String changeTimeFormat(String strTime) {
-    
-    Integer hour = Integer.valueOf(strTime.substringBefore(':'));
-    String minutes = strTime.substringAfter(':');
-    String amOrPm = 'AM'
+    String timeofDay='AM';
 
-   if (hour == 12) amOrPm = 'PM';
-    if (hour > 12) {
-        amOrPm = 'PM';
-        hour = hour - 12;
-    }
-    if (hour == 0) {
-        amOrPm = 'AM';
-        hour = 12;
-    }
+   Integer hour = Integer.valueOf(strTime.substringBefore(':'));
 
-    String strHour=string.valueof(hour);
+   String minutes=strTime.substringAfter(':'); 
+
+   if (hour==12) timeofDay ='PM';
+
+   if(hour>12) {
+
+    timeofDay ='PM';
+
+    hour= hour-12;
+
+    }   
+
+  if (hour==0){
+
+      timeofDay ='AM';
+
+      hour=12;
+
+  }
+
+  String strHour=string.valueof(hour);
 
   if (strHour.length()==1) strhour= '0'+hour;
-  return strHour + ':'+ minutes + ' '+ amOrPm;
+
+  return strHour + ':'+ minutes + ' '+ timeofDay;
 }
