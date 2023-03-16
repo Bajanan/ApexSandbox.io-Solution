@@ -1,13 +1,25 @@
 public String reverseWordsInASentence(String sentence){
-    
-    if (sentence == null)
-        return sentence;
 
-    List<String> rev = sentence?.split(' ');
-    String final = '';
+        if(sentence==null)
 
-    for (Integer i = rev.size() - 1; i >= 0; i--) {
-        final += rev[i] + ' ';
-    }
-    return final.trim();
+        {
+
+            return sentence;
+
+        }
+
+        String[] str = sentence.split(' ');
+
+        String s='';
+
+        for(Integer i = str.size()-1;i>=0;i--)
+
+        {
+
+          s += str[i]+' ';
+
+        }    
+
+        return s.trim();  
+
 }
