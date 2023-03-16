@@ -1,10 +1,16 @@
 public Integer nextPrime(Integer num) {
     
-    Integer n = num + 1;
-    while (!IsPrime(n)) {
-        n++;
-    }
-    return n;
+     Integer n = num+1;
+
+        while(!IsPrime(n))
+
+        {
+
+            n++;
+
+        }
+
+        return n;
 
     public Boolean IsPrime(Integer n){
         Integer counter=0;
